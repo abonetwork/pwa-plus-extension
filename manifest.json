@@ -1,0 +1,22 @@
+{
+  "name": "PWA + Kiosk Extension",
+  "version": "1.0",
+  "description": "This extension is for testing pwa and extension",
+  "manifest_version": 3,
+  "author": "Lito Abon",
+  "action": {
+    "default_title": "Kiosk PWA - Extension"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "kiosk_enabled": true,
+  "permissions": ["scripting", "tabs", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "externally_connectable": {
+    "ids": ["*"],
+    "accepts_tls_channel_id": false,
+    "matches": ["*://*.glitch.me/*"]
+  },
+  "update_url": "https://storage.googleapis.com/jm-storage-bucket/pwa-plus-ext-screen-capture/updates.xml"
+}
